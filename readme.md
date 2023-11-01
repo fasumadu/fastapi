@@ -62,6 +62,7 @@ def create_post(posts:PostResponse, db:Session=Depends(get_db)):
    return {"message":new_posts}
 
 model
+
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import TIMESTAMP
@@ -81,6 +82,7 @@ class post(Base):
     created_at=Column(TIMESTAMP(timezone=True),nullable=False,server_default=text('now()'))
 
 database
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
